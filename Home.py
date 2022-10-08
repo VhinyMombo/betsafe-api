@@ -6,11 +6,13 @@ import streamlit as st
 from BestBet import BestBet
 import matplotlib.pyplot as plt
 from gsheetsdb import connect
+from PIL import Image
 
+im = Image.open("ic3.png")
 st.set_page_config(
     layout="wide",
     page_title="Welcome to SafeBet",
-    page_icon="🦈"
+    page_icon=im#"🦈"
 )
 st.title('Bet Safe')
 

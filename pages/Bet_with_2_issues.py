@@ -5,8 +5,15 @@ import numpy as np
 import streamlit as st
 from BestBet import BestBet
 import matplotlib.pyplot as plt
+from PIL import Image
 
-st.set_page_config(layout="wide")
+
+
+im = Image.open("/home/unclevhins/Desktop/app_management/ic3.png")
+st.set_page_config(
+    layout="wide",
+    page_icon=im#"🦈"
+)
 st.title('Bet Safe',)
 
 prob_A = None
