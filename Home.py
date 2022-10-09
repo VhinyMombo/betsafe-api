@@ -13,24 +13,8 @@ st.set_page_config(
     page_icon=im#"🦈"
 )
 
-if "visibility" not in st.session_state:
-    st.session_state.visibility = "visible"
-    st.session_state.disabled = False
 
 st.title('Bet Safe')
-
-page = st.sidebar.selectbox('How many issues have your bet?',
-                            ['Bet with 2 issues','Bet with 3 issues'],
-                            label_visibility=st.session_state.visibility,
-                            disabled=st.session_state.disabled,
-
-) 
-submit1 = st.sidebar.button('Validate')
-
-if page == 'Bet with 2 issues' and submit1:
-    page_2_issues()
-elif(page == 'Bet with 3 issues' and submit1):
-    page_3_issues()
 
 st.markdown('''
 
