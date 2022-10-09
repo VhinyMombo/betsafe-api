@@ -1,3 +1,4 @@
+from turtle import width
 import pandas as pd
 import numpy as np
 import streamlit as st
@@ -12,9 +13,13 @@ st.set_page_config(
     page_icon=im#"🦈"
 )
 
-
-st.title('Bet Safe')
-
+col1, col2, col3 = st.columns([1,1,1])
+with col1:
+    st.write("")
+with col2:
+    st.image("ic3.png", use_column_width = True)
+with col3:
+    st.write("")
 st.markdown('''
 
 ### The Application

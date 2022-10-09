@@ -40,6 +40,17 @@ class BestBet:
             return ('Arbitrage existe')
         else:
             return ("Absence d'Opportunuité d'Arbitrage")
+    def kelly_criterion(self):
+        if any((self.C-1)==1):
+            return []
+
+        S = (self.P * self.C -1)*1/(self.C-1)
+        S[S<0] = 0
+        if len(self.C)==3:
+            res = pd.DataFrame(S.reshape([1,len(self.C)]),columns = ['A','N','B'])
+        else:
+            res = pd.DataFrame(S.reshape([1,len(self.C)]),columns = ['A','B'])
+        return  res
 
     def strategy(self, S, step=0.05):
         self.S = S
