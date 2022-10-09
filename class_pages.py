@@ -40,13 +40,7 @@ def page_2_issues():
     col2.subheader('recents entries')
 
     if submit:  
-        col1       st.sidebar.text('''
-
-from tkinter.messagebox import NO
-from unittest import addModuleCleanup
-
-
-        ''').subheader('Results for entries')
+        st.subheader('Results for entries')
         submit = 0
         C = np.array([
             odd_A, 

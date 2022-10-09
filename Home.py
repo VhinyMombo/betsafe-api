@@ -4,7 +4,6 @@ import streamlit as st
 from BestBet import BestBet
 import matplotlib.pyplot as plt
 from PIL import Image
-from class_pages import *
 
 im = Image.open("ic3.png")
 st.set_page_config(
