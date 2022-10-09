@@ -43,10 +43,13 @@ class BestBet:
 
     def strategy(self, S, step=0.05):
         self.S = S
+        if S >= 15:
+                step = round(S/300,2)
         if self.n_issue == 3:
             phi = {'A': [], 'N': [], 'B': [], 'Payoff': [], 'Payoff_imp': [],
                    'Variance': [], 'Variance_imp': [], 'GL_min': [], 'GL_sum': []}
             self.phi = pd.DataFrame.from_dict(phi)
+
             A = B = N = np.arange(start=0, stop=S + step, step=step)
             for a in A:
                 for n in N:

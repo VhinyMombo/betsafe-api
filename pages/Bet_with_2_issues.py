@@ -40,7 +40,7 @@ if proba_bool == 'Yes':
 
     ''')
     if (all([amount!=0.00, odd_A !=0 , odd_B !=0,
-    amount !=None, odd_A !=None, odd_B !=None]) and np.sum([prob_B,prob_A ]) == 1.0):
+    amount !=None, odd_A !=None, odd_B !=None]) and np.sum([prob_B,prob_A]) == 1.0):
         submit = st.sidebar.button('Submit')
 else:
     amount = st.sidebar.number_input('How much do you want to bet?',0.0)
@@ -58,7 +58,11 @@ if submit:
         odd_B
     ])
     C = np.array([odd_A, odd_B])
-    model = BestBet(C)
+    if (np.array([prob_A, prob_B]) == None).sum() == 2:
+        model = BestBet(C)
+    else:
+        model = BestBet(C,Proba_bookmaker=np.array([prob_A, prob_B]))
+    
     model_defined = True
     model.strategy(amount)
 
