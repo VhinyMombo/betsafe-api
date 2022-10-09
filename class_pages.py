@@ -1,11 +1,8 @@
-from tkinter.messagebox import NO
-from unittest import addModuleCleanup
 import pandas as pd
 import numpy as np
 import streamlit as st
 from BestBet import BestBet
 import matplotlib.pyplot as plt
-from gsheetsdb import connect
 from PIL import Image
 
 
@@ -57,7 +54,7 @@ def page_2_issues():
             odd_B
         ])
         C = np.array([odd_A, odd_B])
-        model = BestBet(C)
+      libtk8.6  model = BestBet(C)
         model_defined = True
         model.strategy(amount)
 
