@@ -62,9 +62,10 @@ if submit:
     model_defined = True
     model.strategy(amount)
 
-    st.markdown('#### Any Arbitrage')
     if model.check_risk_free()=='Arbitrage existe':
+        st.markdown('#### Any Arbitrage')
         st.warning(model.check_risk_free())
+    
     st.markdown('#### Dataframe simulating strategies paths')
     st.dataframe(model.phi)
     st.markdown('#### Graphic variance - return')
