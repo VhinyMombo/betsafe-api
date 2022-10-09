@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from PIL import Image
 
 
-im = Image.open("/home/unclevhins/Desktop/app_management/ic3.png")
+im = Image.open("ic3.png")
 st.set_page_config(
     layout="wide",
     page_icon=im#"🦈"
