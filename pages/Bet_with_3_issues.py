@@ -57,7 +57,7 @@ if submit:
     st.subheader('Results for entries')
     submit = 0
     C = np.array([odd_A,odd_N, odd_B])
-    if (np.array([prob_A, prob_N,prob_B]) == None).sum() == 2:
+    if (np.array([prob_A, prob_N,prob_B]) == None).sum() == 3:
         model = BestBet(C)
     else:
         model = BestBet(C,Proba_bookmaker=np.array([prob_A, prob_N,prob_B]))
