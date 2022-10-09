@@ -19,10 +19,11 @@ st.markdown('''
 
 ### The Application
 
-This app is under development by Vhiny MOMBO, applied mathematics engineer and Data 
-Scientist from [ENSIIE](https://www.ensiie.fr/) and 
+This app is under development by Vhiny Guilley, applied mathematics engineer and Data 
+Scientist graduated from [ENSIIE](https://www.ensiie.fr/) and 
 [Paris Saclay University](https://www.universite-paris-saclay.fr/en). 
-During his study, he learnt Quantitative finance and Risk management.
+During his study, he learnt Data Science and Quantitative finance.
+He like solving problems using operations research and statics.
 This why he implemented this solution which will help you to bet safer
 by losing less while having a good expectation to win.
 ### The Analysis
