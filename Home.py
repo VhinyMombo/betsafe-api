@@ -16,7 +16,7 @@ col1, col2, col3 = st.columns([1,1,1])
 with col1:
     st.write("")
 with col2:
-    st.image("ic3.png", use_column_width = True)
+    st.image("ic3.png", width = 150)
 with col3:
     st.write("")
 st.markdown('''
