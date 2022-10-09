@@ -28,7 +28,8 @@ def page_2_issues():
 
         st.sidebar.text('''
 
-
+from tkinter.messagebox import NO
+from unittest import addModuleCleanup
 
 
         ''')
@@ -42,7 +43,8 @@ def page_2_issues():
         amount !=None, odd_A !=None, odd_B !=None]):
             submit = st.sidebar.button('Submit')
 
-
+from tkinter.messagebox import NO
+from unittest import addModuleCleanup
     col1, col2 = st.columns([3,1])
     col2.subheader('recents entries')
 
@@ -54,7 +56,7 @@ def page_2_issues():
             odd_B
         ])
         C = np.array([odd_A, odd_B])
-      libtk8.6  model = BestBet(C)
+        model = BestBet(C)
         model_defined = True
         model.strategy(amount)
 
