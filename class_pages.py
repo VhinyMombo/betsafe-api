@@ -26,13 +26,6 @@ def page_2_issues():
 
         amount = st.sidebar.number_input('How much do you want to bet?',0)
 
-        st.sidebar.text('''
-
-from tkinter.messagebox import NO
-from unittest import addModuleCleanup
-
-
-        ''')
         if (all([amount!=0.00, odd_A !=0 , odd_B !=0,
         amount !=None, odd_A !=None, odd_B !=None]) and np.sum([prob_B,prob_A ]) == 1.0):
             submit = st.sidebar.button('Submit')
@@ -43,8 +36,6 @@ from unittest import addModuleCleanup
         amount !=None, odd_A !=None, odd_B !=None]):
             submit = st.sidebar.button('Submit')
 
-from tkinter.messagebox import NO
-from unittest import addModuleCleanup
     col1, col2 = st.columns([3,1])
     col2.subheader('recents entries')
 
