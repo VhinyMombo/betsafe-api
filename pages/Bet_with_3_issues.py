@@ -53,30 +53,26 @@ else:
     amount !=None, odd_A !=None, odd_B !=None, odd_N !=None]):
         submit = st.sidebar.button('Submit')
 
-
-col1, col2 = st.columns([3,1])
-col2.subheader('recents entries')
-
 if submit:  
-    col1.subheader('Results for entries')
+    st.subheader('Results for entries')
     submit = 0
     C = np.array([odd_A,odd_N, odd_B])
     model = BestBet(C)
     model_defined = True
     model.strategy(amount)
 
-    col1.markdown('#### Any Arbitrage')
+    st.markdown('#### Any Arbitrage')
     if model.check_risk_free()=='Arbitrage existe':
-        col1.warning(model.check_risk_free())
-    col1.markdown('#### Dataframe simulating strategies paths')
-    col1.dataframe(model.phi)
-    col1.markdown('#### Graphic variance - return')
-    col1.plotly_chart(model.graph_VarianceReturn(),use_container_width=True)
+        st.warning(model.check_risk_free())
+    st.markdown('#### Dataframe simulating strategies paths')
+    st.dataframe(model.phi)
+    st.markdown('#### Graphic variance - return')
+    st.plotly_chart(model.graph_VarianceReturn(),use_container_width=True)
 
 
-    col1.markdown('#### Best Bet based on variance minimization')
+    st.markdown('#### Best Bet based on variance minimization')
     best = model.best_bet(type='variance')
-    col1.dataframe(pd.DataFrame( 
+    st.dataframe(pd.DataFrame( 
         best['bet']
         ))
 
@@ -98,10 +94,10 @@ if submit:
         N + ''' on the issue N. <br>  For a gain/loss of ''' +\
         gl +\
     '''</p>''' 
-    col1.markdown(advice,unsafe_allow_html=True)
+    st.markdown(advice,unsafe_allow_html=True)
 
     if all([best['Gain/Loss'][0][0].round(2)<0,best['Gain/Loss'][0][2].round(2)<0,best['Gain/Loss'][0][1].round(2)<0]):
-        col1.warning(''' You'd better not bet on this Games, it's too risky!''')
+        st.warning(''' You'd better not bet on this Games, it's too risky!''')
 
 
 

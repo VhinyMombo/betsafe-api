@@ -32,7 +32,7 @@ properties.
 
 ### Data
 
-For this version 1.0, all you have to do is to follow the instructions step by step
+For this version 1.1 of the app [version 1.0](https://safebet.herokuapp.com/), all you have to do is to follow the instructions step by step
 You have to provide your odds (you can find it on the pages of your favorite boookmaker) and the 
 probability for each events (if you have it, [coteur](https://www.coteur.com/) is a good provider, otherwise let the algorithm do it for you.)
  '''
