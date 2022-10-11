@@ -41,7 +41,7 @@ class BestBet:
         else:
             return ("Absence d'Opportunuité d'Arbitrage")
     def kelly_criterion(self):
-        if any((self.C-1)==1):
+        if any((self.C-1)==0):
             return []
 
         S = (self.P * self.C -1)*1/(self.C-1)
